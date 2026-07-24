@@ -9,28 +9,32 @@
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
     <div class="top-bar"></div>
     <div class="header">
         <img class="logo" src="assets/images/logo.png"></img>
-        <p class="email-address">nacariojohnlucky@gmail.com</p>
+        <p class="email-address"><i data-lucide="mail"></i> nacariojohnlucky@gmail.com</p>
         <ul class="nav-links">
-            <li class="nav-item"><a href="">Works</a></li>
-            <li class="nav-item"><a href="">Resume</a></li>
-            <li class="nav-item"><a href="">Contact</a></li>
+            <li class="nav-item"><a href=""><i data-lucide="briefcase"></i> Works</a></li>
+            <li class="nav-item"><a href=""><i data-lucide="file-text"></i> Resume</a></li>
+            <li class="nav-item"><a href=""><i data-lucide="send"></i> Contact</a></li>
         </ul>
     </div>
     <div class="hero">
         <div class="name">
             <h1 class="f-name">John Lucky</h1>
             <h1 class="l-name">Nacario</h1>
-            <h2 class="developer-text">Front-end Developer/Embedded Systems Engineer</h2>
+            <h2 class="developer-text">Front-End Developer & Embedded Systems Specialist</h2>
             <p class="developer-description">
-                I’m a software engineer with a strong background in front-end development and embedded systems.
-                I am passionate about using technology to create innovative solutions that make a difference in the
-                world.
+                Hey! I’m John Lucky Nacario, a Front-End Developer with
+                a soft spot for hardware. My main focus is crafting
+                fast, intuitive, and visually sharp web experiences—
+                plus, I have the embedded systems background to
+                connect those interfaces directly to smart devices
+                and microcontrollers.
             </p>
         </div>
 
@@ -38,6 +42,9 @@
             <img class="pp" src="assets/images/pfp.jpg">
         </div>
     </div>
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 
 </html>
