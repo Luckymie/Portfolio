@@ -1,0 +1,131 @@
+:root {
+    /* Colors */
+    --color-bg-topbar: #2e3033;
+    --color-text-main: #2b2d42;
+    --color-text-nav: #333333;
+
+    /* Fonts */
+    --font-primary: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-heading: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+
+    /* Sizing & Spacing */
+    --topbar-height: 75px;
+    --logo-width: 100px;
+    --logo-height: 50px;
+    --page-padding-x: 300px;
+    --nav-gap: 40px;
+    --header-margin-bottom: 100px;
+
+    /* Font Sizes & Weights */
+    --font-size-nav: 22px;
+    --font-size-name: 90px;
+    --font-weight-name: 800;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 1px solid red;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--color-text-main);
+}
+
+.top-bar {
+    height: var(--topbar-height);
+    background-color: var(--color-bg-topbar);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+    margin-bottom: var(--header-margin-bottom);
+}
+
+.logo {
+    width: var(--logo-width);
+    height: var(--logo-height);
+}
+
+.email-address {
+    display: block;
+    font-size: var(--font-size-nav);
+    font-weight: 600;
+    margin: 0 0 0 50px;
+    margin-right: auto;
+    font-family: var(--font-heading);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.nav-item {
+    margin-left: var(--nav-gap);
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: var(--color-text-nav);
+    font-size: var(--font-size-nav);
+    font-weight: bold;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--page-padding-x);
+}
+
+.name {
+    display: block;
+    margin: 0;
+}
+
+.name h1 {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-name);
+    font-weight: var(--font-weight-name);
+    line-height: 1.05;
+    letter-spacing: -1px;
+}
+
+.f-name,
+.l-name {
+    margin: 0;
+}
+
+.developer-text {
+    font-size: var(--font-size-nav);
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.developer-description {
+    max-width: 480px;
+    margin-top: 15px;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.profile-pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.pp {
+    max-width: 600px;
+    height: auto;
+    border-radius: 20px;
+}
