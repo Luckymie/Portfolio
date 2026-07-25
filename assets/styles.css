@@ -528,3 +528,150 @@ body {
     transform: scale(1.01);
     box-shadow: 8px 8px 0px #000000;
 }
+
+/* ==========================================
+   RESPONSIVE MEDIA QUERIES (MOBILE & TABLET)
+   ========================================== */
+
+/* Laptop & Tablet Screens (Max Width: 1200px) */
+@media (max-width: 1200px) {
+    :root {
+        --page-padding-x: 60px;
+    }
+
+    .social-links {
+        left: 20px;
+    }
+
+    .my-works {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+}
+
+/* Tablet Screens (Max Width: 992px) */
+@media (max-width: 992px) {
+    :root {
+        --page-padding-x: 30px;
+        --font-size-name: 64px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .email-address {
+        margin: 0;
+        font-size: 15px;
+    }
+
+    .nav-links {
+        padding: 0;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-item {
+        margin-left: 0;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .developer-description::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .social-links {
+        position: static;
+        transform: none;
+        margin: 30px 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .social-links-list {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .my-works {
+        margin-top: 80px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .my-works h2 {
+        font-size: 42px;
+    }
+}
+
+/* Mobile Screens (Max Width: 600px) */
+@media (max-width: 600px) {
+    :root {
+        --font-size-name: 42px;
+        --font-size-nav: 16px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+        padding: 15px 10px;
+    }
+
+    .nav-links {
+        padding: 0;
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-item {
+        margin-left: 0;
+    }
+
+    .nav-item a {
+        font-size: 15px;
+        padding: 6px 12px;
+    }
+
+    .developer-text {
+        font-size: 18px;
+    }
+
+    .developer-description {
+        font-size: 14px;
+        padding: 15px;
+    }
+
+    .pp {
+        max-width: 100%;
+    }
+
+    .my-works h2 {
+        font-size: 32px;
+    }
+
+    .my-works h3 {
+        font-size: 22px;
+    }
+
+    .my-works img {
+        height: auto;
+    }
+
+    .work-card {
+        padding: 16px;
+    }
+}
