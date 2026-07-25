@@ -50,9 +50,11 @@ body {
         opacity: 0;
         transform: translateX(-120px) skewX(-15deg);
     }
+
     70% {
         transform: translateX(10px) skewX(4deg);
     }
+
     100% {
         opacity: 1;
         transform: translateX(0) skewX(0deg);
@@ -66,13 +68,16 @@ body {
         transform: scale(0.6) rotate(-5deg);
         filter: blur(4px);
     }
+
     60% {
         transform: scale(1.08) rotate(2deg);
         filter: blur(0px);
     }
+
     80% {
         transform: scale(0.96) rotate(-1deg);
     }
+
     100% {
         opacity: 1;
         transform: scale(1) rotate(0deg);
@@ -85,9 +90,11 @@ body {
         opacity: 0;
         transform: translateY(-50px) scaleY(1.2);
     }
+
     70% {
         transform: translateY(8px) scaleY(0.95);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0) scaleY(1);
@@ -96,18 +103,37 @@ body {
 
 /* Impact Camera Shake */
 @keyframes mangaShake {
-    0%, 100% { transform: translate(0, 0) rotate(0deg); }
-    20% { transform: translate(-3px, 2px) rotate(-0.5deg); }
-    40% { transform: translate(3px, -2px) rotate(0.5deg); }
-    60% { transform: translate(-2px, -1px) rotate(-0.3deg); }
-    80% { transform: translate(2px, 1px) rotate(0.3deg); }
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    20% {
+        transform: translate(-3px, 2px) rotate(-0.5deg);
+    }
+
+    40% {
+        transform: translate(3px, -2px) rotate(0.5deg);
+    }
+
+    60% {
+        transform: translate(-2px, -1px) rotate(-0.3deg);
+    }
+
+    80% {
+        transform: translate(2px, 1px) rotate(0.3deg);
+    }
 }
 
 /* Continuous Subtle Manga Panel Float */
 @keyframes mangaFloat {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0) rotate(0deg);
     }
+
     50% {
         transform: translateY(-8px) rotate(0.8deg);
     }
@@ -115,9 +141,12 @@ body {
 
 /* Pulse Speedlines Glow for Badges */
 @keyframes speedPulse {
-    0%, 100% {
+
+    0%,
+    100% {
         box-shadow: 4px 4px 0px #000;
     }
+
     50% {
         box-shadow: 7px 7px 0px #000;
     }
@@ -203,9 +232,17 @@ body {
     animation: mangaSlideDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) backwards;
 }
 
-.nav-item:nth-child(1) { animation-delay: 0.2s; }
-.nav-item:nth-child(2) { animation-delay: 0.35s; }
-.nav-item:nth-child(3) { animation-delay: 0.5s; }
+.nav-item:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.nav-item:nth-child(2) {
+    animation-delay: 0.35s;
+}
+
+.nav-item:nth-child(3) {
+    animation-delay: 0.5s;
+}
 
 .nav-item a {
     text-decoration: none;
@@ -360,4 +397,134 @@ body {
 .pp:hover {
     transform: translate(-6px, -6px) rotate(-1.5deg) scale(1.02);
     box-shadow: 18px 18px 0px #000;
+}
+
+.social-links {
+    position: fixed;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+}
+
+.social-links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.social-link-item {
+    animation: mangaSlashIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+.social-link-item:nth-child(1) { animation-delay: 0.6s; }
+.social-link-item:nth-child(2) { animation-delay: 0.75s; }
+.social-link-item:nth-child(3) { animation-delay: 0.9s; }
+
+.social-link-item a {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    background: #ffffff;
+    border: 3px solid #000000;
+    box-shadow: 4px 4px 0px #000000;
+    border-radius: 8px;
+    transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.social-link-item a:hover {
+    background-color: #000000;
+    transform: translate(-4px, -4px) scale(1.1) rotate(-3deg);
+    box-shadow: 8px 8px 0px #000000;
+}
+
+.social-link-item a svg {
+    width: 24px;
+    height: 24px;
+    color: #000000;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.social-link-item a:hover svg {
+    color: #ffffff;
+    transform: scale(1.15) rotate(5deg);
+}
+
+/* ==========================================
+   MY WORKS SECTION (MANGA COMIC PANEL CARDS)
+   ========================================== */
+
+.my-works {
+    margin-top: 160px;
+    padding-left: var(--page-padding-x);
+    padding-right: var(--page-padding-x);
+    animation: mangaSlashIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.9s backwards;
+}
+
+.work-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.work-card {
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background: #ffffff;
+    border: 4px solid #000000;
+    box-shadow: 10px 10px 0px #000000;
+    border-radius: 12px;
+    padding: 30px;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+
+.work-card:hover {
+    transform: translate(-6px, -6px) rotate(-0.5deg);
+    box-shadow: 16px 16px 0px #000000;
+}
+
+.my-works h2 {
+    text-align: center;
+    font-size: 60px;
+    font-weight: 900;
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #000000;
+    text-shadow: 4px 4px 0px #000000;
+    -webkit-text-stroke: 2px #000000;
+    margin-bottom: 40px;
+}
+
+.my-works h3 {
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: 32px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.my-works img {
+    display: block;
+    margin: 20px auto;
+    height: 480px;
+    width: auto;
+    max-width: 100%;
+    border: 4px solid #000000;
+    border-radius: 8px;
+    box-shadow: 6px 6px 0px #000000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-card:hover img {
+    transform: scale(1.01);
+    box-shadow: 8px 8px 0px #000000;
 }
